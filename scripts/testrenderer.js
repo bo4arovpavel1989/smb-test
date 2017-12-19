@@ -1,14 +1,14 @@
 (function(){
 	
-	function TestHandler(){
+	function TestRenderer(){
 		this.questions;
 	};
 	
-	TestHandler.prototype.addQuestions = function(questions){
+	TestRenderer.prototype.addQuestions = function(questions){
 		this.questions=questions;
 	};
 	
-	TestHandler.prototype.renderTest = function(){
+	TestRenderer.prototype.renderTest = function(){
 		this.questions.forEach(function(question){
 			var source   = $("#"+question.type).html();
 			var template = Handlebars.compile(source);
@@ -20,5 +20,5 @@
 		$('#finishTest').show(400);
 	}
 	
-	window.TestHandler=TestHandler;
+	window.TestRenderer=TestRenderer;
 })();

@@ -13,13 +13,20 @@
 		this.length=arr.length;
 	}
 	
+	AnswerSubmit.prototype.showRight = function(form){
+		var inputs = form.find('input[type=checkbox][value=1]').parent().addClass('rightAnswer');
+		var inputs = form.find('input[type=radio][value=1]').parent().addClass('rightAnswer');
+	}
+	
 	AnswerSubmit.prototype.submitHandler = function(userData, fn){
 		var self=this;
 		$('.'+this.selector).on('submit', function(e){
 			e.preventDefault();
-			$(this).parent().fadeOut(200);
+			$(this).find('button').hide();
+			setTimeout(function(){$(this).parent().hide(200)}.bind(this),3000);
+			self.showRight($(this));
 			self.length = self.length - 1;
-			self.checkAnswer (userData, $( this ).serializeArray(), $(this).data('type'), $(this).data('answer') );
+			self.checkAnswer (userData, $(this).serializeArray(), $(this).data('type'), $(this).data('answer') );
 			if(self.length==0) $('#finishTest').trigger('click');
 		});
 	}
