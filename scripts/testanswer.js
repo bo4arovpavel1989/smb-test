@@ -27,7 +27,7 @@
 			self.showRight($(this));
 			self.remains = self.remains - 1;
 			self.checkAnswer (userData, $(this).serializeArray(), $(this).data('type'), $(this).data('answer'));
-			if(self.remains==0) $('#finishTest').trigger('click');
+			if(self.remains==0) setTimeout(function(){$('#finishTest').trigger('click')},2000);
 		});
 	}
 	
