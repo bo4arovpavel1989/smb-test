@@ -11,6 +11,7 @@
 		answerSubmit.setSelector('test');
 		answerSubmit.setLength(questions[variant]);
 		answerSubmit.submitHandler(userData);
+		userData.setTimer();
 		userData.finishTest();
 	});
 })();

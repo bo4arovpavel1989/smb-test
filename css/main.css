@@ -1,0 +1,20 @@
+body{
+	background-image: url('bg/body.jpg')
+}
+
+.container {
+	background-image: url('bg/chruch.png')
+}
+
+.form-check{
+	border-top: 4px double black;
+}
+
+#formload{
+	margin: 0 25px 10px 25px;
+}
+#countdowntimer{
+	position:fixed;
+	bottom: 30px;
+	right: 30px;
+}

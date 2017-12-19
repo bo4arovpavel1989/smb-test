@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/jquery.countdownTimer.css" />
 	<script src="api/jquery2.js"></script>
+	<script type="text/javascript" src="api/jquery.countdownTimer.min.js"></script>
 	<script src="api/handlebars.js"></script>
 	<script id="radio" type="text/x-handlebars-template">
 	<li>
@@ -15,7 +18,7 @@
 			<div class="form-check">
 			  <label class="form-check-label">
 				<input class="form-check-input" type="radio" name='qst' value="{{this.val}}">
-					{{this.txt}}
+					{{{this.txt}}}
 			  </label>
 			</div>
 			{{/each}}
@@ -31,7 +34,7 @@
 			<div class="form-check">
 			  <label class="form-check-label">
 				<input class="form-check-input" name={{this.name}} type="checkbox" value="{{this.val}}">
-					{{this.txt}}
+					{{{this.txt}}}
 			  </label>
 			</div>
 			{{/each}}
@@ -58,7 +61,7 @@
 	<script id="result" type="text/x-handlebars-template">
 			<h1>Результат</h1>
 			<h3>Уважаемый, {{name}}!</h3>
-			<h3>Ваш результат {{sum}} вопросов из {{max}}.</h3>
+			<h3>{{textMark}}</h3>
 	</script>
 	<script src='scripts/userdata.js'></script>
 	<script src='scripts/testanswer.js'></script>
@@ -67,6 +70,7 @@
 	<script src='scripts/app.js'></script>
 </head>
 <body>
+	<div id="countdowntimer"><span id="m_timer"><span></div>
 	<div class="container">
 		<ol id='formload' style='display:none;'>
 		</ol>
