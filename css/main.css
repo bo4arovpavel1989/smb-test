@@ -1,13 +1,26 @@
 body{
-	background-image: url('bg/body.jpg')
+	background-image: url('bg/body.jpg');
 }
 
-.container {
-	background-image: url('bg/chruch.png')
+.container.testtable {
+	background-image: url('bg/chruch.png');
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	margin-top: 10px;
+	margin-bottom:20px;
+	padding:10px;
+	border:1px solid black;
+	border-radius:3px;
+	opacity:0.95;
 }
 
-.form-check{
-	border-top: 4px double black;
+.form-check-label{
+	border-top: 2px solid grey;
+	font-size:13pt !important;
+}
+input[type="radio"], input[type="checkbox"] {
+	margin-top:0;
 }
 
 #formload{

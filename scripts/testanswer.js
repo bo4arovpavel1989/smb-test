@@ -2,15 +2,15 @@
 	
 	function AnswerSubmit(){
 		this.selector;
-		this.length;
+		this.remains;
 	}
 	
 	AnswerSubmit.prototype.setSelector = function(selector){
 		this.selector=selector;
 	}
 	
-	AnswerSubmit.prototype.setLength = function(arr){
-		this.length=arr.length;
+	AnswerSubmit.prototype.setRemains = function(arr){
+		this.remains=arr.length;
 	}
 	
 	AnswerSubmit.prototype.showRight = function(form){
@@ -22,12 +22,12 @@
 		var self=this;
 		$('.'+this.selector).on('submit', function(e){
 			e.preventDefault();
-			$(this).find('button').hide();
-			setTimeout(function(){$(this).parent().hide(200)}.bind(this),3000);
+			$(this).find("button").prop('disabled',true);
+			setTimeout(function(){$(this).parent().hide(200)}.bind(this),2000);
 			self.showRight($(this));
-			self.length = self.length - 1;
-			self.checkAnswer (userData, $(this).serializeArray(), $(this).data('type'), $(this).data('answer') );
-			if(self.length==0) $('#finishTest').trigger('click');
+			self.remains = self.remains - 1;
+			self.checkAnswer (userData, $(this).serializeArray(), $(this).data('type'), $(this).data('answer'));
+			if(self.remains==0) $('#finishTest').trigger('click');
 		});
 	}
 	

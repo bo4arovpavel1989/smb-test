@@ -18,7 +18,7 @@
 		questions.forEach(function(question){
 			if(question.type=='radio'||question.type=='check'){
 				question.vars.forEach(function(variable){
-					max += variable.val;
+					if(variable.val>0)max += variable.val;
 				});
 			} else {
 				max = max + 1;
@@ -41,14 +41,14 @@
 		var self=this;
 		$('#finishTest').on('click',function(e){
 			e.preventDefault();
-			$(this).hide();
+			$(this).remove();
 			self.getRelation();
 			self.getTextMark();
 			self.renderResult();
 		});
 		setTimeout(function(){
 			$('#finishTest').trigger('click');
-		},15*60*1000);
+		},15*60*1000+1000);
 	}
 	
 	UserData.prototype.getRelation = function(){
@@ -65,6 +65,7 @@
 	
 	UserData.prototype.renderResult=function(){
 		$('#formload').empty();
+		$('#countdowntimer').empty();
 		var source   = $("#result").html();
 		var template = Handlebars.compile(source);
 		var context = this;
