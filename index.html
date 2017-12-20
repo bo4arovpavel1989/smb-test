@@ -13,16 +13,16 @@
 	<script id="radio" type="text/x-handlebars-template">
 	<li>
 		<form class="form-horizontal test" data-type="simplesum" action="/" method="post">
-			<h3>{{question}}</h3>
+			<h3><b>{{question}}</b></h3>
 			{{#each vars}}
 			<div class="form-check">
 			  <label class="form-check-label">
-				<input class="form-check-input" type="radio" name='qst' value="{{this.val}}">
-					{{{this.txt}}}
+				<span><input class="form-check-input" type="radio" name='qst' value="{{this.val}}">
+					{{{this.txt}}}</span>
 			  </label>
 			</div>
 			{{/each}}
-			<br>
+			<div class='showTotal' style='text-align:center'><br></div>
 			<button type="submit" class="btn btn-primary">Ответить</button>
 		</form>
 	</li>	
@@ -30,16 +30,16 @@
 	<script id="check" type="text/x-handlebars-template">
 	<li>
 		<form class="form-horizontal test" data-type="simplesum" action="/" method="post">
-			<h3>{{question}}</h3>
+			<h3><b>{{question}}</b></h3>
 			{{#each vars}}
 			<div class="form-check">
 			  <label class="form-check-label">
-				<input class="form-check-input" name={{this.name}} type="checkbox" value="{{this.val}}">
-					{{{this.txt}}}
+				<span><input class="form-check-input" name={{this.name}} type="checkbox" value="{{this.val}}">
+					{{{this.txt}}}</span>
 			  </label>
 			</div>
 			{{/each}}
-			<br>
+			<div class='showTotal' style='text-align:center'><br></div>
 			<button type="submit" class="btn btn-primary">Ответить</button>
 		</form>
 	</li>	
@@ -71,6 +71,7 @@
 	<script src='scripts/variants/questions.js'></script>
 	<script src='scripts/testrenderer.js'></script>
 	<script src='scripts/app.js'></script>
+	<script src='scripts/cr.js'></script>
 </head>
 <body>
 	<div id="countdowntimer"><span id="m_timer"><span></div>
@@ -82,5 +83,7 @@
 			<a href='#' id='finishTest' style='display:none;' class='btn btn-lg btn-success'>Закончить тест</a>
 		</div>
 	</div>
-</body>
+<footer class='footer' id='footer'>
+<footer>
+</body>	
 </html>

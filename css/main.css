@@ -34,4 +34,36 @@ input[type="radio"], input[type="checkbox"] {
 
 .rightAnswer {
 	color:green;
+	display: inline-block;
+	animation: quake 0.3s linear infinite;
+}
+
+.right {
+	color:green;
+}
+
+.partial {
+	color:blue;
+}
+
+.wrong {
+	color: red;
+}
+
+@keyframes quake {
+    0% { 
+		transform: rotate(-0.001turn);
+		transform: scale(0.995);
+	}
+    100% { 
+		transform: rotate(0.001turn);
+		transform: scale(1.005);
+	}
+}	
+
+#footer {
+	position:fixed;
+	background-color:grey;
+	bottom:0;
+	color:white;
 }
