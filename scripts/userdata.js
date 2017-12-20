@@ -13,7 +13,7 @@
 		this.textMark;
 	}
 	
-	UserData.prototype.getMax = function(questions){
+	UserData.prototype.setMax = function(questions){
 		var max=0;
 		questions.forEach(function(question){
 			if(question.type=='radio'||question.type=='check'){
@@ -25,6 +25,10 @@
 			}
 		});
 		this.max=max;
+	}
+	
+	UserData.prototype.increaseSum = function(val){
+		this.sum += val;
 	}
 	
 	UserData.prototype.setTimer=function(){

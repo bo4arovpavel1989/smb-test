@@ -46,17 +46,17 @@
 		});
 	}
 	
-	AnswerSubmit.prototype.checkAnswer=function(userData, data, type, rightAnswer){
+	AnswerSubmit.prototype.checkAnswer=function(userData, serializeData, type, rightAnswer){
 		if(type === 'simplesum') {
-			data.forEach(function(item){
-				userData.sum += Number(item.value);
+			serializeData.forEach(function(item){
+				userData.increaseSum(Number(item.value));
 			})
 		} else if (type==='sequence') {
 			var textAnswer='';
-			data.forEach(function(item){
+			serializeData.forEach(function(item){
 				textAnswer += item.value;
 			});
-			if(Number(textAnswer)===rightAnswer) userData.sum++;
+			if(Number(textAnswer)===rightAnswer) userData.increaseSum(1);
 		}
 	};
 	window.AnswerSubmit=AnswerSubmit;

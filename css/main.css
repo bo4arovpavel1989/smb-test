@@ -15,9 +15,13 @@ body{
 	opacity:0.95;
 }
 
-.form-check-label{
+.test .form-check:not(:nth-child(2)) .form-check-label{
 	border-top: 2px solid grey;
+}
+
+.form-check-label{
 	font-size:13pt !important;
+	cursor: pointer;
 }
 input[type="radio"], input[type="checkbox"] {
 	margin-top:0;
