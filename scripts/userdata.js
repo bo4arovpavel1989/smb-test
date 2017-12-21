@@ -100,6 +100,8 @@
 		var context = this;
 		var html    = template(context);
 		$('#formload').append(html);
+		console.log(this.sum);
+		console.log(this.max);
 	}
 	
 	window.UserData=UserData;

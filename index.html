@@ -27,7 +27,8 @@
 			{{#each vars}}
 			<div class="form-check">
 			  <label class="form-check-label">
-				<span><input class="form-check-input" type="radio" name='qst' value="{{this.val}}">
+				<span><input class="form-check-input radio"type="radio" name='qst' value="{{this.val}}">
+					<span class="radio-custom"></span>
 					{{{this.txt}}}</span>
 			  </label>
 			</div>
@@ -52,7 +53,8 @@
 			{{#each vars}}
 			<div class="form-check">
 			  <label class="form-check-label">
-				<span><input class="form-check-input" name={{this.name}} type="checkbox" value="{{this.val}}">
+				<span><input class="form-check-input checkbox" name={{this.name}} type="checkbox" value="{{this.val}}">
+						<span class="checkbox-custom"></span>
 					{{{this.txt}}}</span>
 			  </label>
 			</div>
