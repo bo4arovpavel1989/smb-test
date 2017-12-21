@@ -1,16 +1,42 @@
 (function(){
 	
 	function UserData(){
-		this.name;
-		this.sum;
+		this.personalData={};
+		this.sum=0;;
 		this.max;
 	}
 	
-	UserData.prototype.setName = function(name){
-		this.name=name;
-		this.sum=0;
-		this.relation;
-		this.textMark;
+	UserData.prototype.chooseDept = function(){
+		$('#deptChoose').on('change',function(){
+			$('#shiftChoose').empty();
+			var dept = Number($(this).val());
+			for (var i=1; i<=dept*2; i++){
+				var $a=$('<option></option>',{'value':i});
+				$a.append(i)
+				$('#shiftChoose').append($a);
+			}
+		});
+	}
+	
+	UserData.prototype.setUserData = function(obj){
+		this.personalData[obj.name] = obj.value;
+	}
+	
+	UserData.prototype.submitUserData = function(){
+		var self=this;
+		return new Promise(function(resolve, reject) {
+			$('.user_data_form').on('submit',function(e){
+				e.preventDefault();
+				var data = $(this).serializeArray();
+				data.forEach(function(item){
+					self.setUserData(item);
+				});	
+				$('#user_data_form').hide(200,function(){
+					$('#user_data_form_background').remove();
+					resolve();
+				});
+			});
+		});
 	}
 	
 	UserData.prototype.setMax = function(questions){
@@ -65,7 +91,6 @@
 		else if(this.relation<80 && this.relation>=50) this.textMark='Вам необходимо дополнительная подготовка по изучению документов, регламентирующих  деятельность СМБ.';
 		else this.textMark='Ваши знания неудовлетворительны для исполнения обязанностей сотрудника службы безопасности!'		
 	}
-	
 	
 	UserData.prototype.renderResult=function(){
 		$('#formload').empty();

@@ -81,7 +81,7 @@
 	</script>
 	<script id="result" type="text/x-handlebars-template">
 			<div style='text-align:center'><h1>Результат</h1></div>
-			<h3>Уважаемый {{name}}!</h3>
+			<h3>Уважаемый {{personalData.name}} {{personalData.parentname}}!</h3>
 			<h3>{{textMark}}</h3>
 	</script>
 	<script src='scripts/userdata.js'></script>
@@ -94,7 +94,55 @@
 <body>
 	<div id="countdowntimer"><span id="m_timer"><span></div>
 	<div class="container testtable">
-		<div class='pull-right'>Вариант №<span id='varnumber'></span></div>
+		<div id='user_data_form_background'>
+			<div id='user_data_form'>
+				<form class="form-horizontal user_data_form" action="/" method="post">
+					<h3>Представьтесь, пожалуйста!</h3>
+					<br>
+					<div class="form-check">
+					  <label class="form-check-label">
+						Фамилия<br>
+						<input class="form-check-input" name='surname' type="text" required>
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+						Имя<br>
+						<input class="form-check-input" name='name' type="text" required>
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+						Отчество<br>
+						<input class="form-check-input" name='parentname' type="text" required>
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+						Выберите подразделение:<br>
+						<select id='deptChoose'  autocomplete="off" name="dept">
+							<option value="1" selected>Оперативная группа</option>
+							<option value="2">Суточная смена</option>
+					   </select>
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+						Выберите смену:<br>
+						<select  id='shiftChoose'  autocomplete="off" name="shift">
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+					   </select>
+					  </label>
+					</div>
+					<br>
+					<div style='text-align:center'>
+						<button type="submit" class="btn btn-primary">Продолжить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class='pull-right'><span id='varnumber'></span></div>
 		<ol id='formload' style='display:none;'>
 		</ol>
 		<div style='text-align:center'>

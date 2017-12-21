@@ -59,5 +59,6 @@
 			if(Number(textAnswer)===rightAnswer) userData.increaseSum(1);
 		}
 	};
+	
 	window.AnswerSubmit=AnswerSubmit;
 })();

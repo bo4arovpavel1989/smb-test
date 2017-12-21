@@ -4,15 +4,18 @@
 		var userData = new UserData();
 		var testRenderer = new TestRenderer();
 		var variant=  Math.floor(Math.random() * (questions.length));
-		$('#varnumber').text(variant+1);
-		userData.setName(prompt('Представьтесь, пожалуйста!'));
-		userData.setMax(questions[variant]);
-		testRenderer.addQuestions(questions[variant]);
-		testRenderer.renderTest()
-		answerSubmit.setSelector('test');
-		answerSubmit.setRemains(questions[variant]);
-		answerSubmit.submitHandler(userData);
-		userData.setTimer();
-		userData.finishTest();
+		userData.chooseDept();
+		userData.submitUserData().then(
+			function(){
+				userData.setTimer();
+				userData.finishTest();
+				userData.setMax(questions[variant]);
+				testRenderer.addQuestions(questions,variant);
+				testRenderer.renderTest()
+				answerSubmit.setSelector('test');
+				answerSubmit.setRemains(questions[variant]);
+				answerSubmit.submitHandler(userData);
+			}
+		);	
 	});
 })();

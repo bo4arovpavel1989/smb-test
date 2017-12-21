@@ -4,8 +4,9 @@
 		this.questions;
 	};
 	
-	TestRenderer.prototype.addQuestions = function(questions){
-		this.questions=questions;
+	TestRenderer.prototype.addQuestions = function(questions,variant){
+		this.questions=questions[variant];
+		$('#varnumber').text('Вариант №'+(variant+1));
 	};
 	
 	TestRenderer.prototype.renderTest = function(){
@@ -16,7 +17,7 @@
 			var html    = template(context);
 			$('#formload').append(html);
 		});
-		$('#formload').show(600);
+		$('#formload').fadeIn(600);
 		$('#finishTest').show(400);
 	}
 	
