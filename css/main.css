@@ -125,6 +125,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 .checkbox:checked + .checkbox-custom::before,
 .radio:checked + .radio-custom::before {
+	animation: biggerCheck 0.3s ease-in;
 	content: "";
 	display: block;
 	position: absolute;
@@ -137,5 +138,39 @@ input[type="radio"], input[type="checkbox"] {
 }
 .radio-custom,
 .radio:checked + .radio-custom::before {
+	animation: biggerRadio 0.3s ease-in;
 	border-radius: 50%;
+}
+
+@keyframes biggerCheck {
+    0% { 
+		top: 10px;
+		right: 10px;
+		bottom: 10px;
+		left: 10px;
+	}
+    100% { 
+		top: 2px;
+		right: 2px;
+		bottom: 2px;
+		left: 2px;
+	}
+}
+
+
+@keyframes biggerRadio {
+    0% { 
+		top: 10px;
+		right: 10px;
+		bottom: 10px;
+		left: 10px;
+		border-radius: 50%;
+	}
+    100% { 
+		top: 2px;
+		right: 2px;
+		bottom: 2px;
+		left: 2px;
+		border-radius: 50%;
+	}
 }
