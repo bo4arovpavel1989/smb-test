@@ -12,10 +12,11 @@
 	<link  href="api/jquery.fancybox.min.css" rel="stylesheet">
 	<script src="api/jquery.fancybox.min.js"></script>
 	<script src="api/handlebars.js"></script>
+	<script src="api/socketcluster.min.js"></script>
 	<script id="radio" type="text/x-handlebars-template">
 	<li>
 		<form class="form-horizontal test" data-type="simplesum" action="/" method="post">
-			<h3><b>{{question}}</b></h3>
+			<h3><b class='question'>{{question}}</b></h3>
 			{{#if img}}
 			<div style='text-align:center'>
 				<a data-fancybox="gallery" href="images/{{img}}">
@@ -41,7 +42,7 @@
 	<script id="check" type="text/x-handlebars-template">
 	<li>
 		<form class="form-horizontal test" data-type="simplesum" action="/" method="post">
-			<h3><b>{{question}}</b></h3>
+			<h3><b class='question'>{{question}}</b></h3>
 			{{#if img}}
 			<div style='text-align:center'>
 				<a data-fancybox="gallery" href="images/{{img}}">
@@ -67,7 +68,7 @@
 	<script id="text" type="text/x-handlebars-template">
 	<li>
 		<form class="form-horizontal test" data-type="sequence" data-answer="{{rightAnswer}}" action="/" method="post">
-			<h3>{{question}}</h3>
+			<h3><b class='question'>{{question}}</b></h3>
 			{{#each vars}}
 			<div class="form-check">
 			  <label class="form-check-label">

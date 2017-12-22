@@ -8,7 +8,7 @@
 		userData.submitUserData().then(
 			function(){
 				userData.setTimer();
-				userData.finishTest();
+				userData.finishTest(answerSubmit);
 				userData.setMax(questions[variant]);
 				testRenderer.addQuestions(questions,variant);
 				testRenderer.renderTest()
