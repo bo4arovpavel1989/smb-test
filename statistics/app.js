@@ -1,12 +1,11 @@
 var server = require('http').createServer();
-//var io = require('socket.io')(server);
+var express = require('express');
 var socketClusterServer = require('socketcluster-server');
-
-var socketioRequests = require('.socketrequests').socketioRequests;
+var app = express();
+var socketioRequests = require('./socketrequests.js').socketioRequests;
 console.log("App runs");
 		
 var scServer = socketClusterServer.attach(server);
-
 
 server.on('request', app);
 		

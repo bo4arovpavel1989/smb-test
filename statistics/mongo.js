@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/smb-test');
 mongoose.Promise = global.Promise;
 
-var User = new mongoose.Schema({
+var Result = new mongoose.Schema({
 	name: {type: String},
 	surname: {type: String},
 	parentname: {type: String},
@@ -23,5 +23,5 @@ var Question = new mongoose.Schema({
 })
 
 
-module.exports.User = mongoose.model('user', User);
-module.exports.Question = mongoose.model('question', User);
+module.exports.Result = mongoose.model('result', Result);
+module.exports.Question = mongoose.model('question', Question);

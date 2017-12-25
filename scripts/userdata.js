@@ -1,4 +1,13 @@
 (function(){
+	try{
+		var socket = socketCluster.connect({
+			path:'/socketcluster/',
+			port:80,
+			hostname: '127.0.0.1'
+		});
+	} catch(e){
+		console.log('socket connection unavailable...');
+	}	
 	
 	function UserData(){
 		this.personalData={};
@@ -110,6 +119,8 @@
 			user:arr[0],
 			question:arr[1]
 		};
+		console.log(packData);
+		socket.emit('new_result', packData)
 	}
 	
 	
