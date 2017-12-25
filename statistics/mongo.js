@@ -6,8 +6,8 @@ var Result = new mongoose.Schema({
 	name: {type: String},
 	surname: {type: String},
 	parentname: {type: String},
-	dept: {type: Number},
-	shift:{type:Number},
+	dept: {type: String},
+	shift:{type:String},
 	date:{type:Date,default:new Date()},
 	relation:{type:Number},
 	details:{type:Array}

@@ -117,10 +117,14 @@
 		});
 		var packData = {
 			user:arr[0],
-			question:arr[1]
+			questions:arr[1]
 		};
 		console.log(packData);
-		socket.emit('new_result', packData)
+		try{
+			socket.emit('new_result', packData)
+		}catch(e){
+			console.log('socket error');
+		}
 	}
 	
 	
