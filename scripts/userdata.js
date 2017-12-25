@@ -17,9 +17,7 @@
 	}
 	
 	UserData.prototype.getResults = function(){
-		var returnData=this.personalData;
-		returnData.relation=this.relation;
-		return returnData;
+		return Object.assign({},{relation:this.relation},this.personalData);
 	}
 	
 	UserData.prototype.chooseDept = function(){
@@ -108,20 +106,24 @@
 		else this.textMark='Ваши знания неудовлетворительны для исполнения обязанностей сотрудника службы безопасности!'		
 	}
 	
-	UserData.prototype.sendResult = function(arr){
+	UserData.prototype.packResult = function(arr){
 		arr[0].details = arr[1];
 		arr[1].forEach(function(question){
 			question.name = arr[0].name.toLowerCase();
 			question.surname = arr[0].surname.toLowerCase();
 			question.parentname = arr[0].parentname.toLowerCase();
 		});
-		var packData = {
+		return {
 			user:arr[0],
 			questions:arr[1]
 		};
-		console.log(packData);
+	};
+	
+	
+	UserData.prototype.sendResult = function(obj){
+		console.log(obj)
 		try{
-			socket.emit('new_result', packData)
+			socket.emit('new_result', obj)
 		}catch(e){
 			console.log('socket error');
 		}
@@ -136,9 +138,7 @@
 		var context = this;
 		var html    = template(context);
 		$('#formload').append(html);
-		var userResults = this.getResults();
-		console.log(userResults);
-		this.sendResult([this.getResults(),answerSubmit.statistics]);
+		this.sendResult(this.packResult([this.getResults(),answerSubmit.statistics]));
 	}
 	
 	window.UserData=UserData;

@@ -17,7 +17,6 @@
 	AnswerSubmit.prototype.showRight = function(form){
 		var question = form.find('.question').text();
 		var answer=0;
-		console.log(question);
 		var inputsChkBox = form.find('input[type=checkbox][value=1]');
 		inputsChkBox.parent().addClass('rightAnswer');
 		var inputsRadio = form.find('input[type=radio][value=1]');
