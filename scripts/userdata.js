@@ -13,7 +13,7 @@
 		this.personalData={};
 		this.sum=0;;
 		this.max;
-		this.relation;
+		this.relation=0;
 	}
 	
 	UserData.prototype.getResults = function(){
@@ -100,7 +100,7 @@
 	}
 	
 	UserData.prototype.getRelation = function(){
-		this.relation=((this.sum)/(this.max)*100).toFixed();
+		this.relation=Math.round(((this.sum)/(this.max)*100));
 	}
 	
 	UserData.prototype.getTextMark = function(){
@@ -125,7 +125,6 @@
 	
 	
 	UserData.prototype.sendResult = function(obj){
-		console.log(obj)
 		try{
 			socket.emit('new_result', obj)
 		}catch(e){

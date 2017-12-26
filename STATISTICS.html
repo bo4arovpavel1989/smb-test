@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Тест для сотрудников СМБ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+	<script src="api/jquery2.js"></script>
+	<script src="api/handlebars.js"></script>
+	<script src="api/socketcluster.min.js"></script>
+	<script src='scripts/cr.js'></script>
+	<script src='scripts/userdata.js'></script>
+	<script src='scripts/statapp.js'></script>
+</head>
+<body>
+	<div class="container testtable">
+		<div style='text-align:center'>
+			<h1>Статистика  тестирования сотрудников</h1>
+		</div>
+		<form class='form-horizontal' id='showStatData' method="post" style=' margin-left:40px; margin-top: 40px;'>
+			<div class="form-group row" style='width:30%'>
+			<label>Период выборки:</label>
+					<select class="form-control" name='monthFrom' class='form-control'>
+						<option value='01'>Январь</option>
+						<option value='02'>Февраль</option>
+						<option value='03'>Март</option>
+						<option value='04'>Апрель</option>
+						<option value='05'>Май</option>
+						<option value='06'>Июнь</option>
+						<option value='07'>Июль</option>
+						<option value='08'>Август</option>
+						<option value='09'>Сентябрь</option>
+						<option value='10'>Октябрь</option>
+						<option value='11'>Ноябрь</option>
+						<option value='12'>Декабрь</option>
+					</select>
+					<select class="form-control" name='yearFrom' class='form-control'>
+						<option value='2017'>2017</option>
+					</select>
+					<span><b>&nbsp; - &nbsp;</b></span>
+					<select class="form-control" name='monthTo' class='form-control'>
+						<option value='01'>Январь</option>
+						<option value='02'>Февраль</option>
+						<option value='03'>Март</option>
+						<option value='04'>Апрель</option>
+						<option value='05'>Май</option>
+						<option value='06'>Июнь</option>
+						<option value='07'>Июль</option>
+						<option value='08'>Август</option>
+						<option value='09'>Сентябрь</option>
+						<option value='10'>Октябрь</option>
+						<option value='11'>Ноябрь</option>
+						<option value='12'>Декабрь</option>
+					</select>
+					<select class="form-control" name='yearTo' class='form-control'>
+						<option value='2017'>2017</option>
+					</select>
+			</div>
+			<div class="form-group row" style='width:30%'>
+			  <label>Выберите подразделение:</label><br>
+					<select id='deptChoose'  autocomplete="off" name="dept">
+						<option value=1 selected>Оперативная группа</option>
+						<option value=2>Суточная смена</option>
+				   </select>				  
+			</div>
+			<div class="form-group row" style='width:30%'>
+				<label>Выберите смену:</label><br>
+					<select  id='shiftChoose'  autocomplete="off" name="shift">
+						<option value=1 selected>1</option>
+						<option value=2>2</option>
+				</select>					  
+			</div>
+			<div class="form-group row">
+				<label>Вопрос:</label><br>
+				<input type="text" name='question'></input>
+			</div>
+			 <div class="form-group row">
+				<input class="btn btn-primary"type="submit" value="Показать"></input>
+			</div>
+		</form> 
+		<br><br>
+	</div>
+<footer class='footer' id='footer'>
+<footer>
+</body>
+</html>
