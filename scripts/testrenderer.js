@@ -4,8 +4,8 @@
 		this.questions;
 	};
 	
-	TestRenderer.prototype.addQuestions = function(questions,variant){
-		this.questions=questions[variant];
+	TestRenderer.prototype.addQuestions = function(questionsPack,variant){
+		this.questions=questionsPack;
 		$('#varnumber').text('Вариант №'+(variant+1));
 	};
 	

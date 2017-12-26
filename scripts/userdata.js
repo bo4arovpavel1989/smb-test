@@ -41,14 +41,18 @@
 		return new Promise(function(resolve, reject) {
 			$('.user_data_form').on('submit',function(e){
 				e.preventDefault();
-				var data = $(this).serializeArray();
-				data.forEach(function(item){
-					self.setUserData(item);
-				});	
-				$('#user_data_form').hide(200,function(){
-					$('#user_data_form_background').remove();
-					resolve();
-				});
+				try{
+					var data = $(this).serializeArray();
+					data.forEach(function(item){
+						self.setUserData(item);
+					});	
+					$('#user_data_form').hide(200,function(){
+						$('#user_data_form_background').remove();
+						resolve();
+					});
+				}catch(e){
+					reject(e);
+				}
 			});
 		});
 	}
