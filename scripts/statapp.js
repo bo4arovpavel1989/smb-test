@@ -1,6 +1,6 @@
 (function(){
 	$(document).ready(function(){
-		var userData = new UserData();
-		userData.chooseDept();	
+		var statData = new StatData();
+		statData.chooseDept();	
 	});
 })();
