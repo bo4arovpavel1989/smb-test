@@ -10,6 +10,7 @@
 	<script src="api/handlebars.js"></script>
 	<script src="api/socketcluster.min.js"></script>
 	<script src='scripts/cr.js'></script>
+	<script src='scripts/renderFunctions.js'></script>
 	<script src='scripts/statdata.js'></script>
 	<script src='scripts/statapp.js'></script>
 </head>
@@ -22,39 +23,39 @@
 			<div class="form-group row" style='width:30%'>
 			<label>Период выборки:</label>
 					<select class="form-control" name='monthFrom' class='form-control'>
-						<option value='01'>Январь</option>
-						<option value='02'>Февраль</option>
-						<option value='03'>Март</option>
-						<option value='04'>Апрель</option>
-						<option value='05'>Май</option>
-						<option value='06'>Июнь</option>
-						<option value='07'>Июль</option>
-						<option value='08'>Август</option>
-						<option value='09'>Сентябрь</option>
-						<option value='10'>Октябрь</option>
-						<option value='11'>Ноябрь</option>
-						<option value='12'>Декабрь</option>
+						<option value=0>Январь</option>
+						<option value=1>Февраль</option>
+						<option value=2>Март</option>
+						<option value=3>Апрель</option>
+						<option value=4>Май</option>
+						<option value=5>Июнь</option>
+						<option value=6>Июль</option>
+						<option value=7>Август</option>
+						<option value=8>Сентябрь</option>
+						<option value=9>Октябрь</option>
+						<option value=10>Ноябрь</option>
+						<option value=11>Декабрь</option>
 					</select>
 					<select class="form-control" name='yearFrom' class='form-control'>
-						<option value='2017'>2017</option>
+						<option value=2017>2017</option>
 					</select>
 					<span><b>&nbsp; - &nbsp;</b></span>
 					<select class="form-control" name='monthTo' class='form-control'>
-						<option value='01'>Январь</option>
-						<option value='02'>Февраль</option>
-						<option value='03'>Март</option>
-						<option value='04'>Апрель</option>
-						<option value='05'>Май</option>
-						<option value='06'>Июнь</option>
-						<option value='07'>Июль</option>
-						<option value='08'>Август</option>
-						<option value='09'>Сентябрь</option>
-						<option value='10'>Октябрь</option>
-						<option value='11'>Ноябрь</option>
-						<option value='12'>Декабрь</option>
+						<option value=0>Январь</option>
+						<option value=1>Февраль</option>
+						<option value=2>Март</option>
+						<option value=3>Апрель</option>
+						<option value=4>Май</option>
+						<option value=5>Июнь</option>
+						<option value=6>Июль</option>
+						<option value=7>Август</option>
+						<option value=8>Сентябрь</option>
+						<option value=9>Октябрь</option>
+						<option value=10>Ноябрь</option>
+						<option value=11>Декабрь</option>
 					</select>
 					<select class="form-control" name='yearTo' class='form-control'>
-						<option value='2017'>2017</option>
+						<option value=2017>2017</option>
 					</select>
 			</div>
 			<div class="form-group row" style='width:30%'>
@@ -71,15 +72,36 @@
 						<option value=2>2</option>
 				</select>					  
 			</div>
+			<div class="form-group row" style='width:30%'>
+				<label>Тип визуализации:</label><br>
+					<select  autocomplete="off" name="vizualizetype">
+						<option value=0 selected>Таблица</option>
+						<option value=1>График</option>
+						<option value=2>Круговая диаграмма</option>
+				</select>					  
+			</div>
 			<div class="form-group row">
-				<label>Вопрос:</label><br>
+				<label>Вопрос (не обязательно):</label><br>
 				<input type="text" name='question'></input>
 			</div>
+			<div class="form-group row" style='width:30%'>
+				<label>Ответ на вопрос:</label><br>
+					<select  autocomplete="off" name="answer">
+						<option value=0 selected>Правильный</option>
+						<option value=1>Частичный</option>
+						<option value=2>Неправильный</option>
+				</select>					  
+			</div>
 			 <div class="form-group row">
-				<input class="btn btn-primary"type="submit" value="Показать"></input>
+				<input class="btn btn-primary"type="submit" value="Загрузить"></input>
 			</div>
 		</form> 
 		<br><br>
+		<div class="loader"></div>
+		<div id='loadResults'>
+		</div>
+		<div id='loadQuestions'>
+		</div>
 	</div>
 <footer class='footer' id='footer'>
 <footer>

@@ -10,6 +10,8 @@
 	}	
 	
 	function StatData(){
+		this.formFields = {};
+		this.data={};
 	}
 	
 	StatData.prototype.chooseDept = function(){
@@ -22,6 +24,47 @@
 				$('#shiftChoose').append($a);
 			}
 		});
+	}
+	
+	StatData.prototype.setStatData = function(obj){
+		this.formFields[obj.name] = obj.value;
+	}
+	
+	StatData.prototype.sendRequest = function(){
+		socket.emit('get_data',this.formFields)
+	}
+	
+	StatData.prototype.submitStatform = function(){
+		var self=this;
+		return new Promise(function(resolve, reject) {
+			$('#showStatData').on('submit',function(e){
+				e.preventDefault();
+				$('.loader').addClass('loading');
+				try{
+					var data = $(this).serializeArray();
+					data.forEach(function(item){
+						self.setStatData(item);
+					});	
+					self.sendRequest();
+					resolve();
+				}catch(e){
+					reject(e);
+				}
+			});
+		});
+	}
+	
+	StatData.prototype.renderResult = function(data){
+		renderFunctions[Number(this.formFields.vizualizetype)](data);
+	};
+	
+	StatData.prototype.getData = function(){
+		var self = this;
+		socket.on('take_data',function(data){
+			self.data = data;
+			$('.loader').removeClass('loading');
+			self.renderResult(data);
+		})
 	}
 	
 	window.StatData=StatData;
