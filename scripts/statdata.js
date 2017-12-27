@@ -55,7 +55,10 @@
 	}
 	
 	StatData.prototype.renderResult = function(data){
-		renderFunctions[Number(this.formFields.vizualizetype)](data);
+		statRenderFunctions[Number(this.formFields.vizualizetype)](data.results);
+		if(this.formFields.question.length>0){
+			questionRenderFunctions(data.questions, this.formFields.question, this.formFields.answer);
+		}	
 	};
 	
 	StatData.prototype.getData = function(){

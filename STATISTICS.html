@@ -8,8 +8,28 @@
     <link href="css/main.css" rel="stylesheet">
 	<script src="api/jquery2.js"></script>
 	<script src="api/handlebars.js"></script>
+	<script src="api/moment.js"></script>
+	<script type="text/javascript" src="api/h.min.js"></script>
+	<script type="text/javascript" src="api/register_helpers.js"></script>
 	<script src="api/socketcluster.min.js"></script>
 	<script src='scripts/cr.js'></script>
+	<script id="questions_table" type="text/x-handlebars-template">
+	<div>
+		<h3>На вопрос "{{question}}" дали {{answer}} ответ:</h3>
+		<div>
+			<div class="table-responsive">
+			  <table class='table'>
+			   <tr>
+				<th>ФИО</th>
+				<th>Дата</th>
+			   </tr>
+			   {{#each questions}}
+			   <tr><td>{{capitalizeFirst surname}} {{capitalizeFirst name}}  {{capitalizeFirst parentname}}</td><td>{{formatDate 'YYYY-MM-DD' date}}</tr>
+			   {{/each}}
+			  </table>
+			</div>  
+		</div>	  
+	</script>
 	<script src='scripts/renderFunctions.js'></script>
 	<script src='scripts/statdata.js'></script>
 	<script src='scripts/statapp.js'></script>
