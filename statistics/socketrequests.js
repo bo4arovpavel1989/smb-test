@@ -26,7 +26,7 @@ var async = require('async');
 					date:{$gte:dateFrom,$lt:dateTo},
 					dept:fields.dept,
 					shift:fields.shift
-				},(err, rep)=>{
+				}).sort({relation:-1}).exec((err, rep)=>{
 				if(err) cbk(new Error());
 				packData.results = rep;
 				cbk();

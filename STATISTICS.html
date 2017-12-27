@@ -15,19 +15,37 @@
 	<script src='scripts/cr.js'></script>
 	<script id="questions_table" type="text/x-handlebars-template">
 	<div>
-		<h3>На вопрос "{{question}}" дали {{answer}} ответ:</h3>
-		<div>
-			<div class="table-responsive">
-			  <table class='table'>
-			   <tr>
-				<th>ФИО</th>
-				<th>Дата</th>
-			   </tr>
-			   {{#each questions}}
-			   <tr><td>{{capitalizeFirst surname}} {{capitalizeFirst name}}  {{capitalizeFirst parentname}}</td><td>{{formatDate 'YYYY-MM-DD' date}}</tr>
-			   {{/each}}
-			  </table>
-			</div>  
+		<div style='text-align:center'>
+			<h3>На вопрос <br> <b>"{{question}}"</b> <br> дали {{answer}} ответ:</h3>
+		</div>
+		<div class="table-responsive">
+			<table class='table'>
+				<tr>
+					<th>ФИО</th>
+					<th>Дата</th>
+				</tr>
+				{{#each questions}}
+					<tr><td>{{capitalizeFirst surname}} {{capitalizeFirst name}}  {{capitalizeFirst parentname}}</td><td>{{formatDate 'YYYY-MM-DD' date}}</td></tr>
+				{{/each}}
+			</table>  
+		</div>	  
+	</script>
+	<script id="results_table" type="text/x-handlebars-template">
+	<div>
+		<div style='text-align:center'>
+			<h3>Результаты тестирования сотрудников СМБ ГШ {{dept}} №{{shift}}:</h3>
+		</div>
+		<div class="table-responsive">
+			<table class='table'>
+				<tr>
+					<th>ФИО</th>
+					<th>Результат</th>
+					<th>Дата</th>
+				</tr>
+				{{#each results}}
+					<tr><td>{{capitalizeFirst surname}} {{capitalizeFirst name}}  {{capitalizeFirst parentname}}</td><td>{{relation}}%</td><td>{{formatDate 'YYYY-MM-DD' date}}</td></tr>
+				{{/each}}
+			</table> 
 		</div>	  
 	</script>
 	<script src='scripts/renderFunctions.js'></script>
@@ -118,9 +136,9 @@
 		</form> 
 		<br><br>
 		<div class="loader"></div>
-		<div id='loadResults'>
+		<div id='loadResults' style='padding:40px;'>
 		</div>
-		<div id='loadQuestions'>
+		<div id='loadQuestions' style='padding:40px;'>
 		</div>
 	</div>
 <footer class='footer' id='footer'>
