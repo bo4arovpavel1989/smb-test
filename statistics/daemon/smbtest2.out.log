@@ -1,0 +1,20 @@
+App runs
+Client connected...
+{ monthFrom: '0',
+  yearFrom: '2017',
+  monthTo: '0',
+  yearTo: '2017',
+  dept: '1',
+  shift: '1',
+  vizualizetype: '0',
+  question: '',
+  answer: '0' }
+{ monthFrom: '11',
+  yearFrom: '2017',
+  monthTo: '11',
+  yearTo: '2017',
+  dept: '1',
+  shift: '1',
+  vizualizetype: '0',
+  question: '',
+  answer: '0' }
