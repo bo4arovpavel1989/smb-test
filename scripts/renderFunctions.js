@@ -1,7 +1,7 @@
 (function(){
 	var statRenderFunctions=[];
 	
-	statRenderFunctions[0] = function(results){	
+	statRenderFunctions[0] = function(results,formFields){	
 		/*
 		var context = {results:results};	
 		$('#loadResults').empty();
@@ -9,6 +9,8 @@
 		var template = Handlebars.compile(source);
 		var html    = template(context);
 		$('#loadResults').append(html);*/
+		renderHeader(formFields);
+		$("#gridContainer").show();
 		$("#gridContainer").dxDataGrid({
 			dataSource: results,
 			selection: {
@@ -53,7 +55,11 @@
 		$("#gridContainer").show();
 	}
 	
-	statRenderFunctions[1] = function(results){
+	statRenderFunctions[1] = function(results,formFields){
+		$('#header_here').empty();
+		var context = {shift:formFields.shift};
+		if(formFields.dept=='1') context.dept = 'оперативной группы'
+		else if(formFields.dept=='2') context.dept = 'суточной смены'
 		var visualData=[];
 		results.forEach(function(result,index){
 			var date = new Date(result.date);
@@ -67,8 +73,8 @@
 			var relation = result.relation;
 			visualData.push({name:fullName,relation:relation});
 		});
-		
-		 $("#chart").dxChart({
+		$("#chart").show();
+		$("#chart").dxChart({
 			dataSource: visualData, 
 			series: {
 				argumentField: "name",
@@ -81,7 +87,7 @@
 				enabled: true
 			},
 			title: { 
-				text: "Результаты тестирования сотрудников оперативной группы №1"
+				text: "Результаты тестирования сотрудников "+ context.dept+' №'+context.shift
 			}
 		});
 		$("#chart").show();
@@ -110,15 +116,11 @@
 		if(formFields.dept=='1') context.dept = 'оперативной группы'
 		else if(formFields.dept=='2') context.dept = 'суточной смены'
 		
-		$('#header_here').empty();
-		if($('.dxc-title').find('text').length>0){
-			$('.dxc-title').find('text').text('Результаты тестирования сотрудников '+context.dept+' №'+context.shift);
-		}else{	
-			var source   = $("#results_header").html();
-			var template = Handlebars.compile(source);
-			var html    = template(context);
-			$('#header_here').append(html);
-		}	
+		$('#header_here').empty();	
+		var source   = $("#results_header").html();
+		var template = Handlebars.compile(source);
+		var html    = template(context);
+		$('#header_here').append(html);	
 	}
 	
 	window.renderHeader=renderHeader;
