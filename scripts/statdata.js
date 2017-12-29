@@ -66,8 +66,7 @@
 		socket.on('take_data',function(data){
 			self.data = data;
 			$('.loader').removeClass('loading');
-			$("#gridContainer").hide();
-			$("#chart").hide();
+			$('.loadResults').hide();
 			self.renderResult(data);
 		})
 	}

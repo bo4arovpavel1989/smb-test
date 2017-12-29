@@ -8,14 +8,14 @@ var Result = new mongoose.Schema({
 	parentname: {type: String},
 	dept: {type: String},
 	shift:{type:String},
-	date:{type:Date,default:new Date()},
+	date:{type:Date},
 	relation:{type:Number},
 	details:{type:Array}
 });
 
 var Question = new mongoose.Schema({
 	question:{type:String},
-	date:{type:Date,default:new Date()},
+	date:{type:Date},
 	name: {type: String},
 	surname: {type: String},
 	parentname: {type: String},

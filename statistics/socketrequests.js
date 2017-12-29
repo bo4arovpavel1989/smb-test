@@ -7,9 +7,14 @@ var async = require('async');
 	console.log("\r\n Client connected...\r\n");
 	 
 	client.on('new_result',(data)=>{
-		var result = new Result(data.user).save();
+		var result=data.user;
+		result.date = new Date();
+		console.log(result);
+		var resultToWrite = new Result(result).save();
 		data.questions.forEach(question=>{
-			var qToWrite = new Question(question).save();
+			var qToWrite = question;
+			qToWrite.date = new Date();
+			var writing = new Question(qToWrite).save();
 		});
 	});	
 	

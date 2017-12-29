@@ -69,7 +69,6 @@
 			}
 		});
 		this.max=max;
-		console.log(max);
 	}
 	
 	UserData.prototype.increaseSum = function(val){
@@ -126,6 +125,7 @@
 	
 	
 	UserData.prototype.sendResult = function(obj){
+		console.log(obj);
 		try{
 			socket.emit('new_result', obj)
 		}catch(e){
