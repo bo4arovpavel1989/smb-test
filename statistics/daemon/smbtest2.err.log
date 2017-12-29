@@ -1,1 +1,51 @@
 (node:42296) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:185:7)
+    at Signal.wrap.onsignal (internal/process.js:200:44)
+(node:47280) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:185:7)
+    at Signal.wrap.onsignal (internal/process.js:200:44)
+(node:47900) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:185:7)
+    at Signal.wrap.onsignal (internal/process.js:200:44)
+(node:47644) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:185:7)
+    at Signal.wrap.onsignal (internal/process.js:200:44)
+(node:47988) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:185:7)
+    at Signal.wrap.onsignal (internal/process.js:200:44)
+(node:49144) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client

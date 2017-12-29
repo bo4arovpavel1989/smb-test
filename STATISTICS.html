@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 	<script src="api/jquery2.js"></script>
+	 <script src="https://cdn3.devexpress.com/jslib/17.1.4/js/dx.all.js"></script>
 	<script src="api/handlebars.js"></script>
 	<script src="api/moment.js"></script>
 	<script type="text/javascript" src="api/h.min.js"></script>
@@ -30,11 +31,13 @@
 			</table>  
 		</div>	  
 	</script>
-	<script id="results_table" type="text/x-handlebars-template">
-	<div>
+	<script id="results_header" type="text/x-handlebars-template">
 		<div style='text-align:center'>
 			<h3>Результаты тестирования сотрудников СМБ ГШ {{dept}} №{{shift}}:</h3>
 		</div>
+	</script>
+	<script id="results_table" type="text/x-handlebars-template">
+	<div>
 		<div class="table-responsive">
 			<table class='table'>
 				<tr>
@@ -136,7 +139,10 @@
 		</form> 
 		<br><br>
 		<div class="loader"></div>
+		<div id='header_here' style='padding:40px;'></div>
 		<div id='loadResults' style='padding:40px;'>
+		</div>
+		<div id='chart'>
 		</div>
 		<div id='loadQuestions' style='padding:40px;'>
 		</div>

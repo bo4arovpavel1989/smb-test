@@ -56,11 +56,13 @@
 	AnswerSubmit.prototype.checkAnswer=function(userData, serializeData, type, rightAnswer){
 		if(type === 'simplesum') {
 			serializeData.forEach(function(item){
+				console.log(item.value);
 				userData.increaseSum(Number(item.value));
 			})
 		} else if (type==='sequence') {
 			var textAnswer='';
 			serializeData.forEach(function(item){
+				console.log(item.value);
 				textAnswer += item.value;
 			});
 			if(Number(textAnswer)===rightAnswer) userData.increaseSum(1);

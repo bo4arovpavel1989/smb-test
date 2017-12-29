@@ -4,10 +4,9 @@ var async = require('async');
 
  var socketioRequests  = function (client, scServer) {
 	
-	console.log("Client connected...");
+	console.log("\r\n Client connected...\r\n");
 	 
 	client.on('new_result',(data)=>{
-		console.log(data);
 		var result = new Result(data.user).save();
 		data.questions.forEach(question=>{
 			var qToWrite = new Question(question).save();
@@ -15,7 +14,6 @@ var async = require('async');
 	});	
 	
 	client.on('get_data',(fields)=>{
-		console.log(fields);
 		var dateFrom = new Date(Date.UTC(fields.yearFrom, fields.monthFrom, 1));
 		var dateTo = new Date(Date.UTC(fields.yearTo, Number(fields.monthTo)+1, 0));
 		var qRegex = new RegExp(fields.question, 'ui');
