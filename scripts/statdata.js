@@ -56,6 +56,7 @@
 	
 	StatData.prototype.renderResult = function(data){
 		statRenderFunctions[Number(this.formFields.vizualizetype)](data.results);
+		renderHeader(this.formFields);
 		if(this.formFields.question.length>0){
 			questionRenderFunctions(data.questions, this.formFields.question, this.formFields.answer);
 		}	
@@ -67,7 +68,6 @@
 			self.data = data;
 			$('.loader').removeClass('loading');
 			self.renderResult(data);
-			renderHeader(self.formFields);
 		})
 	}
 	

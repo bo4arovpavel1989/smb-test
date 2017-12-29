@@ -24,6 +24,7 @@
 			var relation = result.relation;
 			visualData.push({name:fullName,relation:relation});
 		});
+		
 		 $("#chart").dxChart({
 			dataSource: visualData, 
 			series: {
@@ -32,6 +33,12 @@
 				name: "результат,%",
 				type: "bar",
 				color: '#1DF7AA'
+			},
+			"export": {
+				enabled: true
+			},
+			title: { 
+				text: "Результаты тестирования сотрудников оперативной группы №1"
 			}
 		});
 	}
@@ -60,10 +67,14 @@
 		else if(formFields.dept=='2') context.dept = 'суточной смены'
 		
 		$('#header_here').empty();
-		var source   = $("#results_header").html();
-		var template = Handlebars.compile(source);
-		var html    = template(context);
-		$('#header_here').append(html);
+		if($('.dxc-title').find('text').length>0){
+			$('.dxc-title').find('text').text('Результаты тестирования сотрудников '+context.dept+' №'+context.shift);
+		}else{	
+			var source   = $("#results_header").html();
+			var template = Handlebars.compile(source);
+			var html    = template(context);
+			$('#header_here').append(html);
+		}	
 	}
 	
 	window.renderHeader=renderHeader;
