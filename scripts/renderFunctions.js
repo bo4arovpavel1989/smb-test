@@ -2,12 +2,55 @@
 	var statRenderFunctions=[];
 	
 	statRenderFunctions[0] = function(results){	
+		/*
 		var context = {results:results};	
 		$('#loadResults').empty();
 		var source   = $("#results_table").html();
 		var template = Handlebars.compile(source);
 		var html    = template(context);
-		$('#loadResults').append(html);
+		$('#loadResults').append(html);*/
+		$("#gridContainer").dxDataGrid({
+			dataSource: results,
+			selection: {
+				mode: "multiple"
+			},
+			"export": {
+				enabled: true,
+				fileName: "Результаты тестирования",
+				allowExportSelectedData: true
+			},
+			groupPanel: {
+				visible: true
+			},
+			columns: [
+				{
+					dataField: "surname",
+					caption: "Фамилия",
+					width: 150
+				}, 
+				{
+					dataField: "name",
+					caption: "Имя",
+					width: 150
+				}, 
+				{
+					dataField: "parentname",
+					caption: "Отчество",
+					width: 150
+				},
+				{
+					dataField: "relation",
+					caption: "Результат, %",
+					width: 150
+				}, {
+					dataField: "date",
+					caption: "Дата",
+					dataType: "date",
+					width: 150
+				}     
+			]
+		});
+		$("#gridContainer").show();
 	}
 	
 	statRenderFunctions[1] = function(results){
@@ -41,10 +84,11 @@
 				text: "Результаты тестирования сотрудников оперативной группы №1"
 			}
 		});
+		$("#chart").show();
 	}
 	
 	statRenderFunctions[2] = function(data){
-		
+		$('#loadResults').empty();
 	}
 		
 	var questionRenderFunctions = function(questions,q,a){
