@@ -1833,3 +1833,60 @@ App runs
        surname: 'бочаров',
        parentname: 'викторович' } ],
   date: 2017-12-29T10:08:12.474Z }
+
+ Client connected...
+
+
+ Client connected...
+
+{ relation: 7,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество постов в секторе музейной безопасности «Главный штаб»:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Где на территории Главного штаба расположено экскурсионное бюро:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Взрывное устройство – это:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T11:50:57.321Z }
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+{ relation: 0,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество постов в секторе музейной безопасности «Главный штаб»:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Где на территории Главного штаба расположено экскурсионное бюро:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T11:57:48.331Z }
+App runs
