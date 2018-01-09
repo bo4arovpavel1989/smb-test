@@ -90,7 +90,9 @@
 			<div><ol id='more_here'></ol></div>
 	</script>
 	<script id="detail_result" type="text/x-handlebars-template">
-		<li class='answer{{answer}}'>{{question}}</li>
+		{{#each this}}
+			<li class='answer{{answer}}'>{{question}}</li>
+		{{/each}}
 	</script>
 	<script src='scripts/userdata.js'></script>
 	<script src='scripts/testanswer.js'></script>

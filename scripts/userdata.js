@@ -143,6 +143,25 @@
 		var html    = template(context);
 		$('#formload').append(html);
 		this.sendResult(this.packResult([this.getResults(),answerSubmit.statistics]));
+		this.showDetails(answerSubmit);
+		console.log(answerSubmit.statistics);
+	}
+	
+	UserData.prototype.showDetails=function(answerSubmit){
+		var self=this;
+		$('.show_more').on('click',function(e){
+			e.preventDefault();
+			self.renderDetails(answerSubmit);
+		});
+	}
+	
+	UserData.prototype.renderDetails=function(answerSubmit){
+		$('#more_here').empty();
+		var source   = $("#detail_result").html();
+		var template = Handlebars.compile(source);
+		var context = answerSubmit.statistics;
+		var html    = template(context);
+		$('#more_here').append(html);
 	}
 	
 	window.UserData=UserData;

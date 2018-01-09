@@ -66,15 +66,15 @@ input[type="radio"], input[type="checkbox"] {
 	animation: quake 0.3s linear infinite;
 }
 
-.right {
+.right, .answer0 {
 	color:green;
 }
 
-.partial {
-	color:blue;
+.partial, .answer1{
+	color:orange;
 }
 
-.wrong {
+.wrong, .answer2{
 	color: red;
 }
 
@@ -194,4 +194,8 @@ input[type="radio"], input[type="checkbox"] {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.show_more {
+	cursor:pointer;
 }
