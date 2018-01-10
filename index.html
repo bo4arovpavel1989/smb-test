@@ -91,7 +91,7 @@
 	</script>
 	<script id="detail_result" type="text/x-handlebars-template">
 		{{#each this}}
-			<li class='answer{{answer}}'>{{question}}</li>
+			<li><span class='answer{{answer}}'>{{question}}</span></li>
 		{{/each}}
 	</script>
 	<script src='scripts/userdata.js'></script>
@@ -133,6 +133,7 @@
 						<select id='deptChoose'  autocomplete="off" name="dept">
 							<option value=1 selected>Оперативная группа</option>
 							<option value=2>Суточная смена</option>
+							<option value=3>Сотрудники БП</option>
 					   </select>
 					  </label>
 					</div>

@@ -69,7 +69,7 @@
 			result.parentname.charAt(0).toUpperCase()+' ('+
 			date.getFullYear()+'-'+
 			(date.getMonth()+1)+'-'+
-			(date.getDate()+1)+')';
+			date.getDate()+')';
 			var relation = result.relation;
 			visualData.push({name:fullName,relation:relation});
 		});
@@ -85,6 +85,9 @@
 			},
 			"export": {
 				enabled: true
+			},
+			label:{
+				overlappingBehavior:'none'
 			},
 			title: { 
 				text: "Результаты тестирования сотрудников "+ context.dept+' №'+context.shift

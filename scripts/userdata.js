@@ -28,6 +28,7 @@
 				var $a=$('<option></option>',{'value':i});
 				$a.append(i)
 				$('#shiftChoose').append($a);
+				if(i==4)break;
 			}
 		});
 	}
