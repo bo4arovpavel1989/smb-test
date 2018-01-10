@@ -86,8 +86,11 @@
 			"export": {
 				enabled: true
 			},
-			label:{
-				overlappingBehavior:'none'
+			argumentAxis: { 
+				label: {
+					displayMode: "stagger",
+					staggeringSpacing: 10
+				}
 			},
 			title: { 
 				text: "Результаты тестирования сотрудников "+ context.dept+' №'+context.shift
@@ -96,8 +99,78 @@
 		$("#chart").show();
 	}
 	
-	statRenderFunctions[2] = function(data){
-		$('#loadResults').empty();
+	statRenderFunctions[2] = function(data,formFields){
+		var dataToShow = [
+			{mark:'отлично',relation:0},
+			{mark:'хорошо',relation:0},
+			{mark:'удовлетворительно',relation:0},
+			{mark:'неудовлетворительно',relation:0}
+		];
+		calculateDataForPie();
+		var context = {shift:formFields.shift};
+		if(formFields.dept=='1') context.dept = 'оперативной группы'
+		else if(formFields.dept=='2') context.dept = 'суточной смены'
+		$('#header_here').empty();
+		$("#pie").show();
+		$("#pie").dxPieChart({
+			size: {
+				width: 1000
+			},
+			palette: "bright",
+			dataSource: dataToShow,
+			series: [
+				{
+					argumentField: "mark",
+					valueField: "relation",
+					label: {
+						visible: true,
+						connector: {
+							visible: true,
+							width: 1
+						}
+					}
+				}
+			],
+			diameter:0.7,
+			legend: {
+				position: "inside",
+				horizontalAlignment: "center",
+				verticalAlignment: "bottom"
+			},
+			title: "Результаты тестирования сотрудников "+ context.dept+' №'+context.shift,
+			"export": {
+				enabled: true
+			},
+			onPointClick: function (e) {
+				var point = e.target;
+				toggleVisibility(point);
+			},
+			onLegendClick: function (e) {
+				var arg = e.target;
+		
+				toggleVisibility(this.getAllSeries()[0].getPointsByArg(arg)[0]);
+			}
+		});
+		
+		function toggleVisibility(item) {
+			if(item.isVisible()) {
+				item.hide();
+			} else { 
+				item.show();
+			}
+		}
+		
+		function calculateDataForPie(){
+			data.forEach(function(d){
+				console.log(d)
+				if(d.relation>=90)dataToShow[0].relation++;
+				if(d.relation>=80 && d.relation<90)dataToShow[1].relation++;
+				if(d.relation>=50 && d.relation<80)dataToShow[2].relation++;
+				else dataToShow[3].relation++;
+			});
+		}
+		
+		$("#pie").show();		
 	}
 		
 	var questionRenderFunctions = function(questions,q,a){
