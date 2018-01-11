@@ -13,7 +13,7 @@
 	        this.value = initial.replace(/[A-z/<>`~,.;\'\]\[]/g, function ( x ){
 	            return x == x.toLowerCase() ? replacer[ x ] : replacer[ x.toLowerCase() ].toUpperCase();
 	        });
-			this.value = this.value.charAt(0).toUpperCase() +  this.value.slice(1); //first letter to upper case
+			this.value = this.value.charAt(0).toUpperCase() +  this.value.slice(1).toLowerCase(); //first letter to upper case
 		});
 	}
 	window.changeLanguage=changeLanguage;

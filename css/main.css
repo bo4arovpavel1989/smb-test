@@ -71,7 +71,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .partial, .answer1{
-	color:orange;
+	color:#8c4c04;
 }
 
 .wrong, .answer2{

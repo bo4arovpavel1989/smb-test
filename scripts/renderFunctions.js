@@ -60,6 +60,7 @@
 		var context = {shift:formFields.shift};
 		if(formFields.dept=='1') context.dept = 'оперативной группы'
 		else if(formFields.dept=='2') context.dept = 'суточной смены'
+		else if(formFields.dept=='3') context.dept = 'БП суточной смены'
 		var visualData=[];
 		results.forEach(function(result,index){
 			var date = new Date(result.date);
@@ -93,7 +94,7 @@
 				}
 			},
 			title: { 
-				text: "Результаты тестирования сотрудников "+ context.dept+' №'+context.shift
+				text: "Результаты тестирования сотрудников СМБ ГШ "+ context.dept+' №'+context.shift
 			}
 		});
 		$("#chart").show();
@@ -110,6 +111,7 @@
 		var context = {shift:formFields.shift};
 		if(formFields.dept=='1') context.dept = 'оперативной группы'
 		else if(formFields.dept=='2') context.dept = 'суточной смены'
+		else if(formFields.dept=='3') context.dept = 'БП суточной смены'
 		$('#header_here').empty();
 		$("#pie").show();
 		$("#pie").dxPieChart({
@@ -137,7 +139,7 @@
 				horizontalAlignment: "center",
 				verticalAlignment: "bottom"
 			},
-			title: "Результаты тестирования сотрудников "+ context.dept+' №'+context.shift,
+			title: "Результаты тестирования сотрудников СМБ ГШ "+ context.dept+' №'+context.shift,
 			"export": {
 				enabled: true
 			},
@@ -191,6 +193,7 @@
 		var context = {shift:formFields.shift};
 		if(formFields.dept=='1') context.dept = 'оперативной группы'
 		else if(formFields.dept=='2') context.dept = 'суточной смены'
+		else if(formFields.dept=='3') context.dept = 'БП суточной смены'
 		
 		$('#header_here').empty();	
 		var source   = $("#results_header").html();
