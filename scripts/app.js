@@ -1,5 +1,6 @@
 (function(){
 	$(document).ready(function(){
+		changeLanguage();
 		var answerSubmit = new AnswerSubmit();
 		var userData = new UserData();
 		var testRenderer = new TestRenderer();

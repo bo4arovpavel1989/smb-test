@@ -1890,3 +1890,754 @@ App runs
        parentname: 'викторович' } ],
   date: 2018-01-09T11:57:48.331Z }
 App runs
+
+ Client connected...
+
+{ relation: 0,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество постов в секторе музейной безопасности «Главный штаб»:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Где на территории Главного штаба расположено экскурсионное бюро:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Назовите размеры ручной клади доступ, с которой на территорию музея разрешен:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:00:23.845Z }
+
+ Client connected...
+
+{ relation: 14,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите индивидуальные средства защиты:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'В случае обнаружения взрывного устройства как Вы сообщите начальнику дежурной смены (начальнику оперативной группы):',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите признаки взрывного устройства:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:02:58.100Z }
+
+ Client connected...
+
+{ relation: 7,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество пожарных отсеков в здании Главного штаба:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите подрядные организации, располагающиеся на территории Главного штаба:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:09:56.238Z }
+
+ Client connected...
+
+{ relation: -10,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите индивидуальные средства защиты:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите признаки взрывного устройства:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:10:50.036Z }
+
+ Client connected...
+
+{ relation: 7,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество пожарных отсеков в здании Главного штаба:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите подрядные организации, располагающиеся на территории Главного штаба:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:12:50.662Z }
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+{ relation: 21,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество пожарных отсеков в здании Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите подрядные организации, располагающиеся на территории Главного штаба:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'На какое время накладывается жгут для остановки кровотечения',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Порядок действий при обнаружении подозрительного предмета в музее',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Ваши действия в случае обнаружения подозрительного предмета:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера лестниц выходящие в четвертый двор Главного штаба:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:32:23.479Z }
+
+ Client connected...
+
+{ relation: 14,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество пожарных отсеков в здании Главного штаба:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите подрядные организации, располагающиеся на территории Главного штаба:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'На какое время накладывается жгут для остановки кровотечения',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:33:16.562Z }
+
+ Client connected...
+
+
+ Client connected...
+
+{ relation: 71,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество пожарных отсеков в здании Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите подрядные организации, располагающиеся на территории Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'На какое время накладывается жгут для остановки кровотечения',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Порядок действий при обнаружении подозрительного предмета в музее',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Ваши действия в случае обнаружения подозрительного предмета:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Каким документом регламентируется трудовые отношения между работником и работодателем:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Отравляющие вещества - это:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера лестниц выходящие в четвертый двор Главного штаба:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Назовите временной интервал каждого обхода по маршруту выставочного зала:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Вы стали свидетелем захвата заложника Ваши действия:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:37:07.767Z }
+
+ Client connected...
+
+
+ Client connected...
+
+{ relation: 38,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите индивидуальные средства защиты:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите признаки взрывного устройства:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:49:23.302Z }
+{ relation: 0,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '2',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество постов в секторе музейной безопасности «Главный штаб»:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Выберите правильный порядок действий при обнаружении подозрительного предмета в музеe',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T13:54:23.293Z }
+
+ Client connected...
+
+{ relation: -24,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите индивидуальные средства защиты:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Если человек потерял сознание Ваши действия:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Какое дисциплинарное взыскание может быть наложено на сотрудника сектора музейной безопасности согласно трудового законодательства:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'В чрезвычайных ситуациях (пожар или задымление) сектор ГШ осуществляет взаимодействие:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Укажите время начала обходов на маршрутах патрулирования (выставочные залы):',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-09T14:00:55.586Z }
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+{ relation: 100,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Кровотечение на голове можно остановить при помощи наложения повязки:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Где на территории Главного штаба расположено экскурсионное бюро:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите пункты, отвечающие порядку вызова скорой помощи пострадавшему:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Обход по маршруту № 1 вкл. этаж:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Какие руководящие документы должен знать сотрудник службы музейной безопасности:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Порядок действий при обнаружении подозрительного предмета:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера и дислокацию лифтов с выходом в подвал на объекте Главный штаб:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера лестниц выходящие в четвертый двор Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите наименование выставок на 3 этаже по Дворцовой площади Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Если Вы услышали речевое оповещение в музее об эвакуации:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-10T12:06:29.637Z }
+
+ Client connected...
+
+{ relation: 71,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Назовите количество пожарных отсеков в здании Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите подрядные организации, располагающиеся на территории Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'На какое время накладывается жгут для остановки кровотечения',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Порядок действий при обнаружении подозрительного предмета в музее',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Ваши действия в случае обнаружения подозрительного предмета:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Каким документом регламентируется трудовые отношения между работником и работодателем:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Отравляющие вещества - это:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера лестниц выходящие в четвертый двор Главного штаба:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Назовите временной интервал каждого обхода по маршруту выставочного зала:',
+       answer: 2,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Вы стали свидетелем захвата заложника Ваши действия:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-10T12:18:47.902Z }
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+{ relation: 93,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Кровотечение на груди можно остановить при помощи наложения повязки:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Где на территории Главного штаба расположено экскурсионное бюро:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Вопрос2',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'В чрезвычайных ситуациях сектор ГШ осуществляет взаимодействие:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: '. Обход по маршруту № 2 вкл. этаж:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Каким документом регламентируется трудовые отношения между работником и работодателем:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите задачи сектора СМБ «Главный штаб»:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера лестниц выходящие в третий двор Главного штаба:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера и дислокацию пассажирских лифтов на объекте:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'В случае обнаружения взрывного устройства как Вы сообщите начальнику дежурной смены (начальнику оперативной группы):',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-10T13:21:52.856Z }
+
+ Client connected...
+
+{ relation: 63,
+  surname: 'Бочаров',
+  name: 'Павел',
+  parentname: 'Викторович',
+  dept: '1',
+  shift: '1',
+  details: 
+   [ { question: 'Кровотечение на груди можно остановить при помощи наложения повязки:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Где на территории Главного штаба расположено экскурсионное бюро:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Признаки взрывного устройства:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'В чрезвычайных ситуациях сектор ГШ осуществляет взаимодействие:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Обход по маршруту № 2 вкл. этаж:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Каким документом регламентируется трудовые отношения между работником и работодателем:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите задачи сектора СМБ «Главный штаб»:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера лестниц выходящие в третий двор Главного штаба:',
+       answer: 1,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'Перечислите номера и дислокацию пассажирских лифтов на объекте:',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' },
+     { question: 'В случае обнаружения взрывного устройства как Вы сообщите начальнику дежурной смены (начальнику оперативной группы):',
+       answer: 0,
+       name: 'павел',
+       surname: 'бочаров',
+       parentname: 'викторович' } ],
+  date: 2018-01-10T13:23:24.356Z }
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
+
+ Client connected...
+
