@@ -1,98 +1,10 @@
-2017-12-27 16:35:10 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-27 16:35:10 - Started 44036
-2017-12-28 14:28:23 - Stopping smbtest2.exe
-2017-12-28 14:28:23 - ProcessKill 44036
-2017-12-28 14:28:24 - Found child process: 42296 Name: node.exe
-2017-12-28 14:28:24 - Stopping process 42296
-2017-12-28 14:28:24 - Send SIGINT 42296
-2017-12-28 14:28:24 - SIGINT to 42296 failed - Killing as fallback
-2017-12-28 14:28:24 - Stopping process 44036
-2017-12-28 14:28:24 - Send SIGINT 44036
-2017-12-28 14:28:24 - SIGINT to44036 successful
-2017-12-28 14:28:24 - Finished smbtest2.exe
-2017-12-28 14:28:25 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-28 14:28:25 - Started 46152
-2017-12-28 14:29:53 - Stopping smbtest2.exe
-2017-12-28 14:29:53 - ProcessKill 46152
-2017-12-28 14:29:53 - Found child process: 47280 Name: node.exe
-2017-12-28 14:29:53 - Stopping process 47280
-2017-12-28 14:29:53 - Send SIGINT 47280
-2017-12-28 14:29:53 - SIGINT to 47280 failed - Killing as fallback
-2017-12-28 14:29:53 - Stopping process 46152
-2017-12-28 14:29:53 - Send SIGINT 46152
-2017-12-28 14:29:53 - SIGINT to46152 successful
-2017-12-28 14:29:53 - Finished smbtest2.exe
-2017-12-28 14:29:54 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-28 14:29:54 - Started 48880
-2017-12-28 14:30:21 - Stopping smbtest2.exe
-2017-12-28 14:30:21 - ProcessKill 48880
-2017-12-28 14:30:21 - Found child process: 47900 Name: node.exe
-2017-12-28 14:30:21 - Stopping process 47900
-2017-12-28 14:30:21 - Send SIGINT 47900
-2017-12-28 14:30:21 - SIGINT to 47900 failed - Killing as fallback
-2017-12-28 14:30:21 - Stopping process 48880
-2017-12-28 14:30:21 - Send SIGINT 48880
-2017-12-28 14:30:21 - SIGINT to48880 successful
-2017-12-28 14:30:21 - Finished smbtest2.exe
-2017-12-28 14:30:22 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-28 14:30:22 - Started 48372
-2017-12-28 14:33:44 - Stopping smbtest2.exe
-2017-12-28 14:33:44 - ProcessKill 48372
-2017-12-28 14:33:44 - Found child process: 47644 Name: node.exe
-2017-12-28 14:33:45 - Stopping process 47644
-2017-12-28 14:33:45 - Send SIGINT 47644
-2017-12-28 14:33:45 - SIGINT to 47644 failed - Killing as fallback
-2017-12-28 14:33:45 - Stopping process 48372
-2017-12-28 14:33:45 - Send SIGINT 48372
-2017-12-28 14:33:45 - SIGINT to48372 successful
-2017-12-28 14:33:45 - Finished smbtest2.exe
-2017-12-28 14:33:46 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-28 14:33:46 - Started 48408
-2017-12-28 14:38:35 - Stopping smbtest2.exe
-2017-12-28 14:38:35 - ProcessKill 48408
-2017-12-28 14:38:35 - Found child process: 47988 Name: node.exe
-2017-12-28 14:38:35 - Stopping process 47988
-2017-12-28 14:38:35 - Send SIGINT 47988
-2017-12-28 14:38:35 - SIGINT to 47988 failed - Killing as fallback
-2017-12-28 14:38:35 - Stopping process 48408
-2017-12-28 14:38:35 - Send SIGINT 48408
-2017-12-28 14:38:35 - SIGINT to48408 successful
-2017-12-28 14:38:35 - Finished smbtest2.exe
-2017-12-28 14:38:36 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-28 14:38:36 - Started 48524
-2017-12-29 12:56:36 - Stopping smbtest2.exe
-2017-12-29 12:56:36 - ProcessKill 48524
-2017-12-29 12:56:36 - Found child process: 49144 Name: node.exe
-2017-12-29 12:56:36 - Stopping process 49144
-2017-12-29 12:56:36 - Send SIGINT 49144
-2017-12-29 12:56:36 - SIGINT to 49144 failed - Killing as fallback
-2017-12-29 12:56:36 - Stopping process 48524
-2017-12-29 12:56:36 - Send SIGINT 48524
-2017-12-29 12:56:36 - SIGINT to48524 successful
-2017-12-29 12:56:36 - Finished smbtest2.exe
-2017-12-29 12:56:38 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-29 12:56:38 - Started 47112
-2017-12-29 13:07:42 - Stopping smbtest2.exe
-2017-12-29 13:07:42 - ProcessKill 47112
-2017-12-29 13:07:42 - Found child process: 47156 Name: node.exe
-2017-12-29 13:07:42 - Stopping process 47156
-2017-12-29 13:07:42 - Send SIGINT 47156
-2017-12-29 13:07:42 - SIGINT to 47156 failed - Killing as fallback
-2017-12-29 13:07:42 - Stopping process 47112
-2017-12-29 13:07:42 - Send SIGINT 47112
-2017-12-29 13:07:42 - SIGINT to47112 successful
-2017-12-29 13:07:42 - Finished smbtest2.exe
-2017-12-29 13:07:43 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2017-12-29 13:07:43 - Started 49512
-2018-01-09 15:28:05 - Stopping smbtest2.exe
-2018-01-09 15:28:05 - ProcessKill 49512
-2018-01-09 15:28:06 - Found child process: 50104 Name: node.exe
-2018-01-09 15:28:06 - Stopping process 50104
-2018-01-09 15:28:06 - Send SIGINT 50104
-2018-01-09 15:28:06 - SIGINT to 50104 failed - Killing as fallback
-2018-01-09 15:28:06 - Stopping process 49512
-2018-01-09 15:28:06 - Send SIGINT 49512
-2018-01-09 15:28:06 - SIGINT to49512 successful
-2018-01-09 15:28:06 - Finished smbtest2.exe
-2018-01-09 15:34:45 - Starting C:\Program Files\nodejs\node.exe  --harmony D:\smb-test\statistics\node_modules\node-windows\lib\wrapper.js --file D:\smb-test\statistics\app.js --log "SMB-test-2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2018-01-09 15:34:45 - Started 28440
+2018-01-11 15:09:12 - Stopping smbtest2.exe
+2018-01-11 15:09:12 - ProcessKill 28440
+2018-01-11 15:09:12 - Found child process: 28680 Name: node.exe
+2018-01-11 15:09:12 - Stopping process 28680
+2018-01-11 15:09:12 - Send SIGINT 28680
+2018-01-11 15:09:12 - SIGINT to 28680 failed - Killing as fallback
+2018-01-11 15:09:12 - Stopping process 28440
+2018-01-11 15:09:12 - Send SIGINT 28440
+2018-01-11 15:09:13 - SIGINT to28440 successful
+2018-01-11 15:09:13 - Finished smbtest2.exe
