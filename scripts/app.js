@@ -13,7 +13,7 @@
 				userData.finishTest(answerSubmit);
 				userData.setMax(questionsPack);
 				testRenderer.addQuestions(questionsPack,variant);
-				testRenderer.renderTest()
+				testRenderer.renderTest();
 				answerSubmit.setSelector('test');
 				answerSubmit.setRemains(questionsPack);
 				answerSubmit.submitHandler(userData);

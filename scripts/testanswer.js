@@ -17,33 +17,25 @@
 	AnswerSubmit.prototype.showRight = function(form){
 		var question = form.find('.question').text();
 		var answer=0;
-		var inputsChkBox = form.find('input[type=checkbox][value=1]');
-		inputsChkBox.parent().addClass('rightAnswer');
-		var inputsRadio = form.find('input[type=radio][value=1]');
-		inputsRadio.parent().addClass('rightAnswer');
-		var inputsChkBoxChecked = form.find('input[type=checkbox][value=1]:checked').length;
-		var inputsChkBoxWrongChecked = form.find('input[type=checkbox][value!=1]:checked').length;
-		var inputsRadioChecked = form.find('input[type=radio][value=1]:checked').length;
-		if (inputsRadio.length > 0 && inputsRadioChecked >0) {
-			form.find('.showTotal').addClass('right').html('Правильный ответ!');
-		} else if (inputsRadio.length > 0 && inputsRadioChecked >=0) {
-			form.find('.showTotal').addClass('wrong').html('Неправильный ответ!');
-			answer=2;
-		} else if (inputsChkBox.length >0 && inputsChkBoxChecked > 0 && inputsChkBoxChecked == inputsChkBox.length && inputsChkBoxWrongChecked==0) {
-			form.find('.showTotal').addClass('right').html('Отмечено верно ' + inputsChkBoxChecked + ' из ' + inputsChkBox.length+'!');
-		}else if (inputsChkBox.length >0 && inputsChkBoxChecked > 0 && inputsChkBoxChecked == inputsChkBox.length && inputsChkBoxWrongChecked!=0) {
-			form.find('.showTotal').addClass('partial').html('Отмечено верно ' + inputsChkBoxChecked + ' из ' + inputsChkBox.length+', но допущены ошибки!');
+		var inputs = form.find('input[value=1]');
+		inputs.parent().addClass('rightAnswer');
+		var inputsRightChecked = form.find('input[value=1]:checked').length;
+		var inputsWrongChecked = form.find('input[value!=1]:checked').length;
+		if (inputsRightChecked > 0 && inputsRightChecked == inputs.length && inputsWrongChecked==0) {
+			form.find('.showTotal').addClass('right').html('Отмечено верно ' + inputsRightChecked + ' из ' + inputs.length+'!');
+		}else if (inputsRightChecked > 0 && inputsRightChecked == inputs.length && inputsWrongChecked!=0) {
+			form.find('.showTotal').addClass('partial').html('Отмечено верно ' + inputsRightChecked + ' из ' + inputs.length+', но допущены ошибки!');
 			answer=1;
-		}else if (inputsChkBox.length >0 && inputsChkBoxChecked > 0 && inputsChkBoxChecked != inputsChkBox.length) {
-			form.find('.showTotal').addClass('partial').html('Отмечено верно ' + inputsChkBoxChecked + ' из ' + inputsChkBox.length+'!');
+		}else if (inputsRightChecked > 0 && inputsRightChecked != inputs.length) {
+			form.find('.showTotal').addClass('partial').html('Отмечено верно ' + inputsRightChecked + ' из ' + inputs.length+'!');
 			answer=1;
-		} else if (inputsChkBox.length >0 && inputsChkBoxChecked == 0) {
-			form.find('.showTotal').addClass('wrong').html('Не отмечен ни один правильный вариант!');
+		} else if (inputsRightChecked == 0) {
+			form.find('.showTotal').addClass('wrong').html('Ответ неверный!');
 			answer=2;
 		}
 		this.statistics.push({question:question,answer:answer});
 	}
-	
+		
 	AnswerSubmit.prototype.submitHandler = function(userData, fn){
 		var self=this;
 		$('.'+this.selector).on('submit', function(e){
