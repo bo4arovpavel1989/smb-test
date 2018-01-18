@@ -72,12 +72,15 @@
 			{{#each vars}}
 			<div class="form-check">
 			  <label class="form-check-label">
+				<a class="dec"><span class='glyphicon glyphicon-chevron-left'></span></a>
+				<input class="form-check-input sequence_answer fieldCount" name={{this.name}} data-min='1' min='1' type="number" required>
+				<a class="inc"><span class='glyphicon glyphicon-chevron-right'></span></a>
 				{{this.txt}}
-				<input class="form-check-input" name={{this.name}} min='1' type="number" required>
 			  </label>
 			</div>
 			{{/each}}
 			<br>
+			<div class='showTotal' style='text-align:center'><br></div>
 			<button type="submit" class="btn btn-primary">Ответить</button>
 		</form>
 	</li>	
@@ -97,6 +100,7 @@
 	<script src='scripts/userdata.js'></script>
 	<script src='scripts/testanswer.js'></script>
 	<script src='scripts/variants/questions.js'></script>
+	<script src='scripts/inc_dec_btns.js'></script>
 	<script src='scripts/testrenderer.js'></script>
 	<script src='scripts/russian_language.js'></script>
 	<script src='scripts/app.js'></script>
@@ -135,7 +139,7 @@
 							<option value=1>Оперативная группа</option>
 							<option value=2 selected>Суточная смена</option>
 							<option value=3>Сотрудники БП</option>
-							<option value=4>Начальники смен</option>
+							<option value=4>Начальники дежурных смен</option>
 					   </select>
 					  </label>
 					</div>

@@ -16,6 +16,7 @@
 			var context = question;
 			var html    = template(context);
 			$('#formload').append(html);
+			catalogItemCounter('.fieldCount');
 		});
 		$('#formload').fadeIn(600);
 		$('#finishTest').show(400);

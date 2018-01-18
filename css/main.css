@@ -51,6 +51,14 @@ input[type="radio"], input[type="checkbox"] {
 	margin-top:0;
 }
 
+.inc, .dec {
+	color: green;
+}
+
+.sequence_answer {
+	width: 40px;
+}
+
 #formload{
 	margin: 0 25px 10px 25px;
 }
