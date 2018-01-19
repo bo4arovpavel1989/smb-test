@@ -16,13 +16,12 @@
 			
 			function init(el) {
 				if(!el.attr('disabled')){
-					dec.on('click', function(){decrement()});
-					inc.on('click', function(){increment()});
+					dec.on('click', decrement);
+					inc.on('click', increment);
 				}
 
 					// Уменьшим значение
 				function decrement() {
-					
 					var value = parseInt(el[0].value) || 0;
 					value--;
 
@@ -32,8 +31,7 @@
 				};
 
 					// Увеличим значение
-				function increment() {
-						
+				function increment() {	
 					var value = parseInt(el[0].value) || 0;
 							
 					value++;

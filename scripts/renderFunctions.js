@@ -57,10 +57,7 @@
 	
 	statRenderFunctions[1] = function(results,formFields){
 		$('#header_here').empty();
-		var context = {shift:formFields.shift};
-		if(formFields.dept=='1') context.dept = 'оперативной группы'
-		else if(formFields.dept=='2') context.dept = 'суточной смены'
-		else if(formFields.dept=='3') context.dept = 'БП суточной смены'
+		var context = {shift:formFields.shift,dept:getHeader(formFields)};
 		var visualData=[];
 		results.forEach(function(result,index){
 			var date = new Date(result.date);
@@ -108,10 +105,7 @@
 			{mark:'неудовлетворительно',relation:0}
 		];
 		calculateDataForPie();
-		var context = {shift:formFields.shift};
-		if(formFields.dept=='1') context.dept = 'оперативной группы'
-		else if(formFields.dept=='2') context.dept = 'суточной смены'
-		else if(formFields.dept=='3') context.dept = 'БП суточной смены'
+		var context = {shift:formFields.shift, dept:getHeader(formFields)};
 		$('#header_here').empty();
 		$("#pie").show();
 		$("#pie").dxPieChart({
@@ -154,6 +148,7 @@
 			}
 		});
 		
+		
 		function toggleVisibility(item) {
 			if(item.isVisible()) {
 				item.hide();
@@ -189,12 +184,15 @@
 		$('#loadQuestions').append(html);
 	}
 	
+	function getHeader(formFields){
+		if(formFields.dept=='1') return 'оперативной группы'
+		else if(formFields.dept=='2') return 'суточной смены'
+		else if(formFields.dept=='3') return 'БП суточной смены'
+		else if(formFields.dept=='4') return 'начальника смены'
+	}
+	
 	var renderHeader = function(formFields){
-		var context = {shift:formFields.shift};
-		if(formFields.dept=='1') context.dept = 'оперативной группы'
-		else if(formFields.dept=='2') context.dept = 'суточной смены'
-		else if(formFields.dept=='3') context.dept = 'БП суточной смены'
-		
+		var context = {shift:formFields.shift,dept:getHeader(formFields)};		
 		$('#header_here').empty();	
 		var source   = $("#results_header").html();
 		var template = Handlebars.compile(source);
