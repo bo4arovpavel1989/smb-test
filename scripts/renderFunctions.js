@@ -161,9 +161,9 @@
 			data.forEach(function(d){
 				console.log(d)
 				if(d.relation>=90)dataToShow[0].relation++;
-				if(d.relation>=80 && d.relation<90)dataToShow[1].relation++;
-				if(d.relation>=50 && d.relation<80)dataToShow[2].relation++;
-				else dataToShow[3].relation++;
+				if(d.relation>=70 && d.relation<90)dataToShow[1].relation++;
+				if(d.relation>=50 && d.relation<70)dataToShow[2].relation++;
+				if(d.relation<50) dataToShow[3].relation++;
 			});
 		}
 		
