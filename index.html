@@ -54,7 +54,7 @@
 			{{#each vars}}
 			<div class="form-check">
 			  <label class="form-check-label">
-				<span><input class="form-check-input checkbox" name={{this.name}} type="checkbox" value="{{this.val}}">
+				<span class='{{this.class_input}}'><input class="form-check-input checkbox {{this.class_input}}" name={{this.name}} type="checkbox" value="{{this.val}}">
 						<span class="checkbox-custom"></span>
 					{{{this.txt}}}</span>
 			  </label>

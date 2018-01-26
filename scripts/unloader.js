@@ -4,7 +4,7 @@ function Unloader(){
  
     this.unload = function(evt)
     {
-        var message = "Вы уверены, что хотите покинуть страницу оформления заказа?";
+        var message = "Вы уверены, что хотите покинуть страницу?";
         if (typeof evt == "undefined") {
             evt = window.event;
         }

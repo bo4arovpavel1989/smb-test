@@ -18,8 +18,17 @@
 			$('#formload').append(html);
 		});
 		catalogItemCounter('.fieldCount');
+		this.checkAll();
 		$('#formload').fadeIn(600);
 		$('#finishTest').show(400);
+	}
+	
+	TestRenderer.prototype.checkAll = function(){
+		$('.check_all').on('click',function(){
+			if( $(this).is(':checked') ) {
+				$(this).closest('form').find('input:not(:checked):not(.check_all)').trigger('click');
+			}
+		});
 	}
 	
 	window.TestRenderer=TestRenderer;
