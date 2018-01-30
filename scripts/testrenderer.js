@@ -14,6 +14,12 @@
 			var source   = $("#"+question.type).html();
 			var template = Handlebars.compile(source);
 			var context = question;
+			if (question.type=='check'){
+				context.total_rights = 0;
+				context.vars.forEach(function(v){
+					if (v.val == 1) context.total_rights++;
+				});
+			}
 			var html    = template(context);
 			$('#formload').append(html);
 		});

@@ -17,16 +17,17 @@
 	AnswerSubmit.prototype.showRight = function(form){
 		var question = form.find('.question').text();
 		var answer=0;
-		var inputs = form.find('input[value=1]');
+		var inputs = form.find('input[value=1].form-check-input');
 		inputs.parent().addClass('rightAnswer');
 		var inputsRightChecked = form.find('input[value=1]:checked').length;
 		var inputsWrongChecked = form.find('input[value!=1]:checked').length;
-		if (inputsRightChecked > 0 && inputsRightChecked == inputs.length && inputsWrongChecked==0) {
-			form.find('.showTotal').addClass('right').html('Отмечено верно ' + inputsRightChecked + ' из ' + inputs.length+'!');
-		}else if (inputsRightChecked > 0 && inputsRightChecked == inputs.length && inputsWrongChecked!=0) {
-			form.find('.showTotal').addClass('partial').html('Отмечено верно ' + inputsRightChecked + ' из ' + inputs.length+', но допущены ошибки!');
-			answer=1;
-		}else if (inputsRightChecked > 0 && inputsRightChecked != inputs.length) {
+		if (inputsWrongChecked != 0) {
+			form.find('.showTotal').addClass('wrong').html('Ответ неверный!');
+			form.find('input[value!=1]:checked').parent().addClass('wrong');
+			answer=2;
+		} else if (inputsRightChecked > 0 && inputsRightChecked == inputs.length) {
+			form.find('.showTotal').addClass('right').html('Правильный ответ!');
+		} else if (inputsRightChecked > 0 && inputsRightChecked != inputs.length) {
 			form.find('.showTotal').addClass('partial').html('Отмечено верно ' + inputsRightChecked + ' из ' + inputs.length+'!');
 			answer=1;
 		} else if (inputsRightChecked == 0) {
@@ -75,9 +76,22 @@
 	
 	AnswerSubmit.prototype.checkAnswer=function(userData, form){
 		if(form.data('type') === 'simplesum') {
-			 form.serializeArray().forEach(function(item){
-				userData.increaseSum(Number(item.value));
-			})
+			if (form.data('inputform') == 'radio') {  //that means radio type question
+				form.serializeArray().forEach(function(item){
+					userData.increaseSum(Number(item.value));
+				});
+			} else {
+				var total_rights;
+				var inter_sum=0;
+				var isWrongChecked = false;
+				form.serializeArray().forEach(function(item){
+					if(item.name != 'total_rights' && Number(item.value) > 0) inter_sum += Number(item.value);
+					else if (item.name == 'total_rights') total_rights = Number(item.value);
+					else if (Number(item.value) <= 0) isWrongChecked = true;
+				});
+				if (!isWrongChecked) userData.increaseSum(inter_sum/total_rights);
+				else userData.increaseSum(0);
+			}
 		} else if (form.data('type')==='sequence') {
 			if(this.checkTextAnswer(form)) userData.increaseSum(1);
 		}

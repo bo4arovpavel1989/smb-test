@@ -59,21 +59,13 @@
 	}
 	
 	UserData.prototype.setMax = function(questions){
-		var max=0;
-		questions.forEach(function(question){
-			if(question.type=='radio'||question.type=='check'){
-				question.vars.forEach(function(variable){
-					if(variable.val>0)max += variable.val;
-				});
-			} else {
-				max = max + 1;
-			}
-		});
-		this.max=max;
+		this.max=questions.length;
 	}
 	
 	UserData.prototype.increaseSum = function(val){
-		this.sum += val;
+		this.sum += parseFloat(val.toPrecision(2),2);
+		console.log(parseFloat(val.toPrecision(2),2));
+		console.log(this.sum + ' / ' + this.max);
 	}
 	
 	UserData.prototype.setTimer=function(){
@@ -105,9 +97,12 @@
 	}
 	
 	UserData.prototype.getTextMark = function(){
+		console.log(this.relation);
+		console.log(this.max);
 		if(this.relation>=90) this.textMark='Поздравляем! Ваша оценка: Отлично!';
 		else if(this.relation<90 && this.relation>=70) this.textMark='Поздравляем! Ваша оценка: хорошо.';
-		else if(this.relation<70 && this.relation>=50) this.textMark='Ваша оценка: удовлетворительно. Вам необходимо дополнительная подготовка по изучению документов, регламентирующих  деятельность СМБ.';
+		else if(this.relation<70 && this.relation>=60) this.textMark='Ваша оценка: удовлетворительно.';
+		else if(this.relation<60 && this.relation>=50) this.textMark='Ваша оценка: удовлетворительно. Вам необходимо дополнительная подготовка по изучению документов, регламентирующих  деятельность СМБ.';
 		else this.textMark='Ваши знания неудовлетворительны для исполнения обязанностей сотрудника службы безопасности!';		
 	}
 	
