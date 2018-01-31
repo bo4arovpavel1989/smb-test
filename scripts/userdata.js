@@ -101,8 +101,7 @@
 		console.log(this.max);
 		if(this.relation>=90) this.textMark='Поздравляем! Ваша оценка: Отлично!';
 		else if(this.relation<90 && this.relation>=70) this.textMark='Поздравляем! Ваша оценка: хорошо.';
-		else if(this.relation<70 && this.relation>=60) this.textMark='Ваша оценка: удовлетворительно.';
-		else if(this.relation<60 && this.relation>=50) this.textMark='Ваша оценка: удовлетворительно. Вам необходимо дополнительная подготовка по изучению документов, регламентирующих  деятельность СМБ.';
+		else if(this.relation<70 && this.relation>=60) this.textMark='Ваша оценка: удовлетворительно. Вам необходимо дополнительная подготовка по изучению документов, регламентирующих  деятельность СМБ.';
 		else this.textMark='Ваши знания неудовлетворительны для исполнения обязанностей сотрудника службы безопасности!';		
 	}
 	
